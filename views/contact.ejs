@@ -1,0 +1,33 @@
+
+  <%- include partials/header.ejs  %>
+
+
+  <div class="formClass" style=" padding-left:11%; padding-right:11%; padding-top:1%; padding-bottom:1%;">
+
+    <h3>Contact Form</h3>
+
+    <div class="containers">
+      <form action="./home">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+        <label for="contactnumber">Contact Number</label>
+        <input type="text" id="contactnumber" name="contactnumber" placeholder="Your contact number..">
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="emailaddress" placeholder="Your email..">
+
+        <br/>
+        <br/>
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+        <input type="submit" value="Submit"> 
+      </form>
+    </div>
+  </div>
+
+  <%- include partials/footer.ejs%>
