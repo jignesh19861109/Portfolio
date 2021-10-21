@@ -1,0 +1,59 @@
+<%- include ../partials/header.ejs  %>
+
+<!--Edit Contact Content-->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1>Edit Contact</h1>
+            <form class="form" method="post">
+                <div class="form-group">
+                    <label for="fnameTextField">First Name</label>
+                    <input type="text" class="form-control"
+                    id="fnameTextField"
+                    placeholder="Enter your First Name"
+                    name="firstname" 
+                    value="<%=list.firstname %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lnameTextField">Last Name</label>
+                    <input type="text" class="form-control"
+                    id="lnameTextField"
+                    placeholder="Enter your Last Name"
+                    name="lastname"
+                    value="<%= list.lastname %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="emailTextField">Email Address</label>
+                    <input type="text" class="form-control"
+                    id="emailTextField"
+                    placeholder="Enter your Email Address"
+                    name="email"
+                    value="<%= list.email %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="pnumberTextField">Phone Number</label>
+                    <input type="text" class="form-control"
+                    id="pnumberTextField"
+                    placeholder="Enter your Phone Number"
+                    name="contact" 
+                    value="<%= list.contact %>"
+                    required>
+                </div>
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i>Submit</button>
+
+                    <a href="/list-view" class="btn btn-warning">
+                    <i class="fas fa-undo"></i>Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include ../partials/footer.ejs%>

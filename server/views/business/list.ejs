@@ -1,0 +1,42 @@
+<%- include ../partials/header.ejs  %>
+
+<main class="listview">
+    <div class="row">
+        <div class="offset-md-1 col-md-10">
+            <h1>Business List View</h1>
+            <a href="/list-view/add" class="btn btn-primary" role="button">
+                <i class="fas fa-plus-circle" ></i>Add Contact</a><br>
+            <br>
+            <table class="table table-bordered table-striped table-hover">
+                <tr class="flex">
+                    <th class="text-center">First Name</th>
+                    <th class="text-center">Last Name</th>
+                    <th class="text-center">Email Address</th>
+                    <th class="text-center">Phone Number</th>
+                    <th class="text-center col-1"></th>
+                    <th class="text-center col-1"></th>
+    
+                </tr>
+
+                <% for(let count = 0; count < ContactList.length; count++){ %>
+                    <tr class="flex">
+                        <td class="text-center"><%= ContactList[count].firstname %></td>
+                        <td class="text-center"><%= ContactList[count].lastname %></td>
+                        <td class="text-center"><%= ContactList[count].email %></td>
+                        <td class="text-center"><%= ContactList[count].contact %></td>
+                        <td class="text-center col-1">
+                            <a href="/list-view/edit/<%= ContactList[count]._id %>" class="btn btn-primary">
+                            <i class="fas fa-pencil-alt"></i>Edit</a>
+                        </td>
+                        <td class="text-center col-1">
+                            <a href="/list-view/delete/<%=ContactList[count]._id %>" class="btn btn-danger">
+                                <i class="fas fa-trash-alt"></i>Delete</a>
+                        </td>
+                    </tr>
+               <% } %>
+            </table>
+        </div>
+    </div>
+</main>
+
+<%- include ../partials/footer.ejs%>

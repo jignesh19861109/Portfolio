@@ -1,0 +1,67 @@
+<%- include ../partials/header.ejs  %>
+
+<main class="container">
+
+
+
+<div class="row">
+  <div class="offset-md-4 col-md-4">
+    <h1>Sign In</h1>
+    <form action="" method="post" autocomplete="off">
+      <fieldset class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control"
+        name="username" placeholder="Enter username"
+        id="username" required autofocus>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control"
+        name="password" placeholder="Enter password"
+        id="password" required>
+        or
+        <a href="/register">Register here</a>
+      </fieldset>
+
+      <fieldset class="form-group text-right">
+        <input type="submit" class="btn btn-success" value="Login">
+        <a href="/">
+          <input type="button" class="btn btn-warning" value="Cancel">
+        </a>
+      </fieldset>
+
+    </form>
+  </div>
+</div>
+</main>
+
+<!-- 
+<div class="page-container">
+   
+    <header><h1> Sign In </h1>
+    </header>
+    <div class="section">
+      <main class="row main-row form">
+          bootstrap classes for columns 
+        <div class="col-lg-6 col-lg-offset-3  col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
+          <form id="form">
+            <label>Username</label>
+            <input type="text" required id="username" placeholder="username" />
+            <br />
+            <label>Password</label><br>
+            <input type="password" required id="password" placeholder="password"/>
+            <br/>
+            <br>
+            <input type="submit" class="btn" value="Sign In" /> &nbsp;&nbsp;&nbsp;&nbsp;
+          </form>
+        </div>
+        <div></div>
+      </main>
+    </div>
+    </div>
+   <script src="js/login.js"></script> 
+</body> -->
+
+
+<%- include ../partials/footer.ejs%>
