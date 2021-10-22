@@ -18,7 +18,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #000;
+    background-color: wheat;
     
 }
 
@@ -34,7 +34,7 @@ li {
 
 li a {
     display: inline-block;
-    color: white;
+    color:black;
     text-align: center;
     padding: 14px 16px;
     text-decoration:none;
@@ -42,12 +42,15 @@ li a {
 }
 
 li a:hover {
-    background-color:rgb(156, 121, 173);
+    background-color:rgb(196, 216, 221);
     text-decoration: none;
 }
 
 /*************Footer*************/
 
+.text-center-footer{
+    background-color: wheat;
+}
 .foote_bottom_ul_amrc {
     list-style-type: none;
     padding: 0px;
@@ -58,19 +61,26 @@ li a:hover {
     margin-left: auto;
 }
 
+.foote_bottom_ul_amrc p {
+    text-align: center;
+}
+
 .foote_bottom_ul_amrc li {
     display: inline;
 }
 
 .foote_bottom_ul_amrc li a {
-    color: #999;
-    margin: 0 12px;
-    text-decoration: none;
+    display: inline-block;
+    color:black;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration:none;
+    margin-top:8px;
 }
 
 .foote_bottom_ul_amrc li:hover a{
-    text-decoration: none;
-    background-color: red;
+    text-decoration-color: blue;
+    background-color:rgb(196, 216, 221);
 } 
 
 
