@@ -35,7 +35,7 @@ module.exports.displayLoginPage = (req, res, next) => {
         res.render('authentication/login', {
             title: "Login",
             messages: req.flash('loginMessage'),
-            displayName: req.user ? req.user.displayName : ''
+         
         })
     }
     else
@@ -68,7 +68,6 @@ module.exports.processLoginPage = (req, res, next) => {
             const payload = 
             {
                 id: user._id,
-                displayName: user.displayName,
                 username: user.username,
                 email: user.email
             }
@@ -84,8 +83,8 @@ module.exports.displayRegisterPage = (req, res, next) => {
         res.render('authentication/register',
         {
             title: 'Register',
-            messages: req.flash('registerMessage'),
-            displayName: req.user ? req.user.displayName : ''
+            messages: req.flash('registerMessage')
+                       
         });
     }
     else
@@ -97,9 +96,7 @@ module.exports.displayRegisterPage = (req, res, next) => {
 module.exports.processRegisterPage = (req, res, next) => {
     let newUser = new User({
         username: req.body.username,
-        //password: req.body.password
-        email: req.body.email,
-        displayName: req.body.displayName
+        email: req.body.email
     });
 
     User.register(newUser, req.body.password, (err) => {
@@ -116,11 +113,11 @@ module.exports.processRegisterPage = (req, res, next) => {
             }
             return res.render('authentication/register',{
                 title: 'Register',
-                message: req.flash('registerMessage'),
-                displayName: req.user ? req.user.displayName: ''
+                message: req.flash('registerMessage')
+              
             });
 
-            res.redirect('/login');
+           
         }
         else
         {

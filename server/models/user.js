@@ -12,15 +12,7 @@ let User = mongoose.Schema
         trim: true,
         required: 'Must enter your username'
     },
-    /*
-    password:
-    {
-        type: String,
-        default: '',
-        trim: true,
-        required: 'Must enter your password'
-    }
-    */
+
     email:
     {
         type: String,
@@ -28,12 +20,7 @@ let User = mongoose.Schema
         trim: true,
         required: 'Must enter your email'
     },
-    displayName:{
-        type: String,
-        default: '',
-        trim: true,
-        required: 'Name is required'
-    },
+  
     created:
     {
         type: Date,

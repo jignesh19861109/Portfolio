@@ -48,6 +48,19 @@ li a:hover {
 
 /*************Footer*************/
 
+.footer{
+    margin: 0 0 55px 0;
+}
+
+.navbar{
+    position:relative;
+    bottom: 0;
+    height: 11%;
+    width: 100%;
+    background-color: wheat;
+    display: flex;
+}
+
 .text-center-footer{
     background-color: wheat;
 }
